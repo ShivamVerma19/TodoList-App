@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:padding="10dp"
+    android:elevation="10dp"
+    app:cardCornerRadius="10dp">
+
+    <View
+        android:id = "@+id/viewColorTag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="5dp"
+        android:background = "@android:color/white"
+        android:paddingBottom = "5dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:padding = "5dp"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+
+            <TextView
+                android:id = "@+id/titleCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight = "5dp"
+                android:layout_toLeftOf="@+id/catCardView"
+                tools:text = "Task Title"
+                android:textSize = "20sp"
+                android:textColor = "#303030"
+                android:textStyle = "bold"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+
+            <TextView
+                android:id = "@+id/taskSubCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/titleCardView"
+                android:layout_marginTop="4dp"
+                tools:text = "Task Subtitle"
+                android:textColor = "@color/black"
+                android:textSize = "16sp"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+
+            <TextView
+                android:id = "@+id/catCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                tools:text = "Category"
+                android:textSize = "12sp"
+                android:textColor = "@color/litherGray"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="80dp"/>
+
+
+            <TextView
+                android:id = "@+id/dateCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/taskSubCardView"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text = "Date"
+                android:textColor = "@color/litherGray"
+                android:textSize="12sp"
+                android:visibility = "visible"/>
+
+            <TextView
+                android:id = "@+id/dateShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/dateCardView"
+                tools:text = "12-07-2022"
+                android:textColor = "@color/black"
+                android:visibility = "visible"/>
+
+
+            <TextView
+                android:id = "@+id/timeCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/taskSubCardView"
+                android:layout_alignParentRight="true"
+                tools:text = "Time"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor = "@color/litherGray"
+                android:textSize="12sp"
+                android:visibility = "visible"/>
+
+
+            <TextView
+                android:id = "@+id/timeShow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@+id/dateCardView"
+                android:layout_alignParentRight="true"
+                tools:text = "9:55"
+                android:textColor = "@color/black"
+                android:visibility = "visible"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

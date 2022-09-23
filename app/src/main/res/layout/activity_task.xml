@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TaskActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id = "@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme = "@style/AppTheme.AppBarOverlay">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/newTaskToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/teal_200"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:title="New Task"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="4dp"
+        android:text="Task Title"
+        android:textColor="#FB9270"
+        android:textSize="16sp" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id = "@+id/titleInpLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:hintTextColor="#C5C4C3"
+        app:boxStrokeColor="#FB9270">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint = "Enter Task Title"
+            android:textSize="18sp"
+            android:paddingRight = "8dp"
+            android:paddingLeft = "8dp"
+            android:inputType="textCapWords"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "What is to be done"
+        android:textSize = "16sp"
+        android:textColor="#FB9270"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginBottom="4dp"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id = "@+id/taskInpLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:hintTextColor="#C5C4C3"
+        app:boxStrokeColor="#FB9270">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint = "Enter Your Task"
+            android:textSize = "18sp"
+            android:paddingRight = "8dp"
+            android:paddingLeft = "8dp"
+            android:gravity="start"
+            android:lines = "3"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Set Remainder Date and Time"
+        android:textSize = "16sp"
+        android:textColor="#FB9270"
+        android:layout_marginLeft = "16dp"
+        android:layout_marginBottom="4dp"  />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id = "@+id/dateInpLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:hintTextColor="#C5C4C3"
+        app:boxStrokeColor="#FB9270">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id = "@+id/dateET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint = "Set Date"
+            android:textSize="18sp"
+            android:paddingRight = "8dp"
+            android:paddingLeft = "8dp"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:focusable = "false"
+            android:drawableRight="@drawable/ic_date_range_black"
+            android:drawableTint="#FB9270"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id = "@+id/timeInpLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:hintTextColor="#C5C4C3"
+        app:boxStrokeColor="#FB9270"
+        android:visibility = "gone">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id = "@+id/timeET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint = "Set Time"
+            android:textSize="18sp"
+            android:paddingRight = "8dp"
+            android:paddingLeft = "8dp"
+            android:clickable="true"
+            android:cursorVisible="false"
+            android:focusable = "false"
+            android:drawableRight="@drawable/ic_access_time_black"
+            android:drawableTint="#FB9270"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp">
+
+        <Spinner
+            android:id = "@+id/spinnerCategory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+       <ImageView
+           android:id = "@+id/imgCategory"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:src = "@drawable/ic_category"
+           android:tint = "#FB9270"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="140dp"
+        android:layout_height="60dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:text="Save"
+        android:textSize="16sp"
+        app:backgroundTint="#FB9270"
+        app:cornerRadius="25dp" />
+</LinearLayout>
